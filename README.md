@@ -9,3 +9,9 @@ Dominos UI is a user interface library built using SCSS. It provides a set of re
 
 ## Installation
 To install Dominos UI, you can clone the repository and install the dependencies:
+```bash
+git clone https://github.com/vishwajeet1298/dominos-ui-scss.git
+cd dominos-ui-scss
+npm install
+
+Open the index.html from components directory
