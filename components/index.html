@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domino's</title>
+    <link rel="stylesheet" href="../styles/indexCSS.css" />
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+</head>
+
+<body>
+    <header>
+        <ul class="menubar">
+            <li>
+                <svg class="menu-button-close" onclick=hideMenubar() xmlns="http://www.w3.org/2000/svg" height="26"
+                    viewBox="0 -960 960 960" width="26">
+                    <path
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg>
+            </li>
+            <li><a href="#">Order Online</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Tracker</a></li>
+            <li><a href="#">Coupons</a></li>
+            <li><a href="#">Rewards</a></li>
+            <li><a href="#">Contact Us</a></li>
+
+        </ul>
+        <ul class="visibleMenuBar">
+            <li class=""><a href="../components/index.html"><img src="../assets/icons/dominos.png"
+                        alt="page-logo" /></a></li>
+            <li class="hideOnMobile"><a class="nav-link" href="#">Order Online</a></li>
+            <li class="hideOnMobile"><a class="nav-link" href="#">Menu</a></li>
+            <li class="hideOnMobile"><a class="nav-link" href="#">Locations</a></li>
+            <li class="hideOnMobile"><a class="nav-link" href="#">Tracker</a></li>
+            <li class="hideOnMobile"><a class="nav-link" href="#">Coupons</a></li>
+            <li class="hideOnMobile"><a class="nav-link" href="#">Rewards</a></li>
+            <li class="hideOnMobile"><button class="nav-sign-in-button"><a class="nav-link" href="#">Sign In
+                        & Earn Rewards
+                    </a></button>
+            </li>
+            <li class="hideOnMobile"><button class="button"><a class="nav-link" href="#"><img
+                            src="../assets/icons/whitecart.png" alt="cart-icon" /></a></button></li>
+            <li class="menu-button-open" onclick=showMenubar()>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg></a>
+            </li>
+
+        </ul>
+    </header>
+    <div class="main-container" onclick=hideMenubar()>
+        <div class="first-container">
+            <main class="main-window" tabindex="0">
+                <!-- <div class="modal_flex"> -->
+                <div class="special-order">
+                    <div>
+                        <h2 class="order-text">Start Your Order</h2>
+                    </div>
+                    <div class="special-order">
+                        <button class="ordertype-button">Delivery</button><span class="or_text">or</span>
+                        <button class="ordertype-button">Carryout</button>
+                    </div>
+
+                </div>
+                <!-- </div> -->
+                <div class="grid-container">
+                    <div class="box" id="box-1" tabindex="0">
+                        <button class="order-now-btn" type="button">Order Now</button>
+                    </div>
+                    <div class="box" id="box-2">
+                        <button class="order-now-btn">Order Now</button>
+                    </div>
+                    <div class="box" id="box-3">
+                        <button class="order-now-btn">Order Now</button>
+                    </div>
+                    <div class="box" id="box-4">
+                        <button class="order-now-btn">Order Now</button>
+                    </div>
+                </div>
+
+
+            </main>
+            <div class="main-window-banner">
+                <section class="banner-section">
+                    <h2>Browse Our Menu</h2>
+                    <div class="fullmenu-banner">
+                        <button id="fullmenu-button" type="button">View Full Menu</button>
+                    </div>
+
+                </section>
+
+            </div>
+
+            <!-- Start of the LoginModalBox  -->
+            <div id="login_modal" class="modal">
+                <div class="modal_flex">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h1 class="form_heading">Sign In To Your Pizza Profile</h1>
+                        <!-- <button>X</button> -->
+                        <div class="login_main_div">
+                            <form class="login_form" id="signupForm">
+                                <div class="login_modal_header">
+                                    <p class="login_form_text">
+                                        Earn<span>free</span>"Domino's, get exclusive deals, and check out faster
+                                        with
+                                        Domino's Rewards."
+                                    </p>
+                                    <button class="join_now_btn" type="button">JOIN NOW</button>
+                                </div>
+                                <section>
+                                    <div class="email_div">
+                                        <label><span>*</span>Email</label>
+                                        <input placeholder="Email" name="Email" id="Email" class="login_input" />
+                                    </div>
+                                    <div class="password_div">
+                                        <label><span>*</span>Password</label>
+                                        <input type="password" placeholder="Password" name="Password" id="Password"
+                                            class="login_input" />
+                                    </div>
+
+                                    <div class="forgot_password">
+                                        <button type="button" class="forgetPass_btn">Forgot Password?</button>
+                                    </div>
+                                    <footer>
+                                        <div class="login_btn_div">
+                                            <button class="login_btn" type="submit">SIGN IN FOR THIS ORDER</button>
+                                        </div>
+                                        <div class="login_btn_div">
+                                            <button class="login_btn_remember">KEEP ME SIGNED IN</button>
+                                        </div>
+                                    </footer>
+                                </section>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of the LoginModalBox  -->
+
+            <!-- Start of the FullMenu MOdalBOX -->
+            <div id="fullmenu_modal" class="menuitemsmodal">
+                <div class="fullmenumodal_flex">
+                    <div class="fullmenumodal_content">
+                        <span class="close">&times;</span>
+                        <div class="fullmenumodal__content__header">
+                            <div class="fullmenumodal__content__header__title">
+                                <h1>Domino's Menu</h1>
+                            </div>
+                        </div>
+                        <div class="fullmenumodal__content__body">
+                            <div class="fullmenu_items"><img src="../assets/images/fullmenuitems/specialty.png"
+                                    alt="" /><a>Speciality Pizza</a></div>
+                            <div class="fullmenu_items"><img src="../assets/images/fullmenuitems/chicken.png"
+                                    alt="" /><a>Chicken</a></div>
+                            <div class="fullmenu_items"><img src="../assets/images/fullmenuitems/loaded-tots.png"
+                                    alt="" /><a>Loaded Tots</a></div>
+                            <div class="fullmenu_items"><img src="../assets/images/fullmenuitems/sandwiches.png"
+                                    alt="" /><a>Sandwiches</a></div>
+                            <div class="fullmenu_items"><img src="../assets/images/fullmenuitems/pasta.png"
+                                    alt="" /><a>Pastas</a></div>
+                            <div class="fullmenu_items"><img
+                                    src="../assets/images/fullmenuitems/breadsandovenbakeddips.png" alt="" /><a>Bread &
+                                    Oven-Baked Dips</a></div>
+                            <div class="fullmenu_items"><img src="../assets/images/fullmenuitems/dessert.png"
+                                    alt="" /><a>Desserts</a></div>
+                            <div class="fullmenu_items"><img src="../assets/images/fullmenuitems/salads.png"
+                                    alt="" /><a>Salads</a></div>
+                            <div class="fullmenu_items"><img src="../assets/images/fullmenuitems/drinks.png"
+                                    alt="" /><a>Drinks</a></div>
+                            <div class="fullmenu_items"><img src="../assets/images/fullmenuitems/extras.png"
+                                    alt="" /><a>Extras</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of the FullMenu MOdalBOX -->
+
+
+
+
+            <div class="navigate">
+                <ul>
+                    <li><a href="https://www.dominos.com/en/pages/order/?locations=1#!/locations/"></a>Locations
+                    </li>
+                    <li><a href="https://www.dominos.com/en/pages/content/opt-in/opt-in"></a>Email & Text Offers
+                    </li>
+                    <li><a href="https://www.dominos.com/en/pages/giftcard/"></a>Gift Cards</li>
+                    <li><a href="https://www.dominos.com/en/pages/tracker/#!/track/order/"></a>Tracker</li>
+                    <li><a href="https://www.dominos.com/en/pages/content/nutritional/nutrition"></a>Nutrition</li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="footer-container">
+        <footer class="footer-main">
+            <div class="footer-div-columns">
+                <div class="footer-col">
+                    <h2 class="footer-heading">Our Company</h2>
+                    <!-- <section> -->
+                    <div class="footer-ul">
+                        <ul class="">
+                            <li>Corporate</li>
+                            <li>Jobs</li>
+                            <li>About Domino's</li>
+                        </ul>
+                    </div>
+
+                    <!-- </section> -->
+                </div>
+                <div class="footer-col">
+                    <h2 class="footer-heading">Our Pizza</h2>
+                    <!-- <section> -->
+                    <div class="footer-ul">
+                        <ul class="">
+                            <li>Nutrition</li>
+                            <li>Allergen Info</li>
+                            <li>Gluten Free Warning</li>
+                        </ul>
+                    </div>
+
+                    <!-- </section> -->
+                </div>
+
+                <div class="footer-col">
+                    <h2 class="footer-heading">Additional Services</h2>
+                    <!-- <section> -->
+                    <div class="footer-ul">
+                        <ul class="">
+                            <li>Smart Slice School Lunch</li>
+                            <li>Large Business Orders</li>
+                            <li>Wedding Registry</li>
+                            <li>Fundraising</li>
+                            <li>Gift Cards</li>
+                            <li>Real Estate</li>
+                            <li>Recycling</li>
+                        </ul>
+                    </div>
+
+                    <!-- </section> -->
+                </div>
+                <div class="footer-col">
+                    <h2 class="footer-heading">Customer Service</h2>
+                    <!-- <section> -->
+                    <div class="footer-ul ">
+                        <ul class="">
+                            <li>Customer Support</li>
+                            <li>Do Not Sell/Share My Info</li>
+                            <li>Email & Text Offers</li>
+                            <li>Carryout Insurance</li>
+                            <li>Privacy</li>
+                            <li>Legal</li>
+                        </ul>
+                    </div>
+                    <!-- </section> -->
+                </div>
+            </div>
+
+
+            <!-- Hidden While In Mobile View -->
+
+            <div class="footer-div-columns-mobile">
+                <div class="footer-col">
+                    <h2 class="footer-mobile-heading">Our Company</h2>
+                    <!-- <section> -->
+                    <div class="footer-mobile-ul">
+                        <ul class="">
+                            <li>Corporate</li>
+                            <li>Jobs</li>
+                            <li>About Domino's</li>
+                        </ul>
+                    </div>
+
+                    <!-- </section> -->
+                </div>
+                <div class="footer-col">
+                    <h2 class="footer-mobile-heading">Our Pizza</h2>
+                    <!-- <section> -->
+                    <div class="footer-mobile-ul">
+                        <ul class="">
+                            <li>Nutrition</li>
+                            <li>Allergen Info</li>
+                            <li>Gluten Free Warning</li>
+                        </ul>
+                    </div>
+
+                    <!-- </section> -->
+                </div>
+
+                <div class="footer-col">
+                    <h2 class="footer-mobile-heading">Additional Services</h2>
+                    <!-- <section> -->
+                    <div class="footer-mobile-ul">
+                        <ul class="">
+                            <li>Smart Slice School Lunch</li>
+                            <li>Large Business Orders</li>
+                            <li>Wedding Registry</li>
+                            <li>Fundraising</li>
+                            <li>Gift Cards</li>
+                            <li>Real Estate</li>
+                            <li>Recycling</li>
+                        </ul>
+                    </div>
+
+                    <!-- </section> -->
+                </div>
+                <div class="footer-col">
+                    <h2 class="footer-mobile-heading">Customer Service</h2>
+                    <!-- <section> -->
+                    <div class="footer-mobile-ul">
+                        <ul class="">
+                            <li>Customer Support</li>
+                            <li>Do Not Sell/Share My Info</li>
+                            <li>Email & Text Offers</li>
+                            <li>Carryout Insurance</li>
+                            <li>Privacy</li>
+                            <li>Legal</li>
+                        </ul>
+                    </div>
+                    <!-- </section> -->
+                </div>
+            </div>
+            <div class="advt-div">
+                <div class="social-media">
+                    <ul>
+                        <li class="social-links"><a href="#"><img src="../assets/icons/icons8-facebook-50.png"
+                                    alt="facebook_icon" class="social_icons"></img></a></li>
+                        <li class="social-links"><a href="#"><img src="../assets/icons/icons8-twitter-50.png"
+                                    alt="twitter_icon" class="social_icons"></img></i></a></li>
+                        <li class="social-links"><a href="#"><img src="../assets/icons/icons8-instagram-50.png"
+                                    alt="instagram_icon" class="social_icons"></img></a></li>
+                        <li class="social-links"><a href="#"><img src="../assets/icons/icons8-linkedin-50.png"
+                                    alt="linkedin_icon" class="social_icons"></img></a></li>
+                    </ul>
+                </div>
+                <div class="advt-div-brand">
+                    <img src="../assets/icons/dpz-coke.png">
+                </div>
+
+                <div class="advt-div-brand">
+                    <img src="../assets/icons/dpz-dairy.png">
+                </div>
+
+
+            </div>
+            <div class="accordion" tabindex="0">
+                <div class="accordion-title" tabindex="0">
+                    <h3>Mix & Match Offer Details</h3>
+                    <img src="../assets/icons/drop-down-30.png" alt="drop-down" class="accordion_icon " />
+                </div>
+                <div class="accordion_description">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores velit ipsa quam debitis
+                        ullam
+                        aliquam eos quod distinctio sint, hic ab? Neque, fugiat. Repudiandae error minima ut? Magni,
+                        molestias cum.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure, iusto inventore accusantium
+                        perspiciatis harum suscipit laboriosam veniam repellat? Beatae natus rem, illum alias
+                        tenetur
+                        autem nesciunt pariatur animi explicabo repellat.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil cum, saepe dolores
+                        dignissimos
+                        qui quia labore repellendus dicta inventore vel provident minus reprehenderit, sit atque rem
+                        aliquid ea autem! Dolor?
+                    </p>
+                </div>
+
+                <div class="accordion-title" tabindex="0">
+                    <h3>Weeklong Carryout Offer Details</h3>
+                    <img src="../assets/icons/drop-down-30.png" alt="drop-down" class="accordion_icon " />
+                </div>
+                <div class="accordion_description">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad iusto facere sit laboriosam rem
+                        corporis earum ratione praesentium sint consequatur. Tenetur ipsam fugiat sequi ad in velit
+                        nemo
+                        perspiciatis excepturi.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. At minus modi culpa possimus
+                        nostrum
+                        nam in temporibus praesentium, dolore dolorem cumque tenetur rerum est tempore fugit labore
+                        veritatis ut earum.
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus illum consequuntur
+                        molestias consectetur distinctio ab libero expedita maxime culpa repudiandae ea, debitis
+                        aperiam
+                        ex nihil? Vel ad odit quia sed.
+                    </p>
+                </div>
+                <div class="accordion-title" tabindex="0">
+                    <h3>Offer Details</h3>
+                    <img src="../assets/icons/drop-down-30.png" alt="drop-down" class="accordion_icon " />
+                </div>
+                <div class="accordion_description">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At alias cupiditate possimus,
+                        nostrum
+                        odit sequi perferendis cumque voluptatibus incidunt, sunt natus doloribus consequatur
+                        praesentium debitis. Quaerat consequatur modi dolor delectus!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis vero cupiditate molestias,
+                        est
+                        non voluptate illum eligendi doloremque exercitationem corporis itaque, totam commodi
+                        reiciendis
+                        saepe iste dolor veniam laboriosam! Eligendi?
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptas dicta officiis vel
+                        nesciunt dignissimos distinctio totam harum impedit natus quo, esse illo eos, necessitatibus
+                        numquam corporis eveniet sit vero!
+                    </p>
+                </div>
+                <div class="accordion-title" tabindex="0">
+                    <h3>Allergen Warning</h3>
+                    <img src="../assets/icons/drop-down-30.png" alt="drop-down" class="accordion_icon " />
+                </div>
+                <div class="accordion_description">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At alias cupiditate possimus,
+                        nostrum
+                        odit sequi perferendis cumque voluptatibus incidunt, sunt natus doloribus consequatur
+                        praesentium debitis. Quaerat consequatur modi dolor delectus!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis vero cupiditate molestias,
+                        est
+                        non voluptate illum eligendi doloremque exercitationem corporis itaque, totam commodi
+                        reiciendis
+                        saepe iste dolor veniam laboriosam! Eligendi?
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptas dicta officiis vel
+                        nesciunt dignissimos distinctio totam harum impedit natus quo, esse illo eos, necessitatibus
+                        numquam corporis eveniet sit vero!
+                    </p>
+                </div>
+                <div class="accordion-title" tabindex="0">
+                    <h3>Domino's Rewards</h3>
+                    <img src="../assets/icons/drop-down-30.png" alt="drop-down" class="accordion_icon " />
+                </div>
+                <div class="accordion_description">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At alias cupiditate possimus,
+                        nostrum
+                        odit sequi perferendis cumque voluptatibus incidunt, sunt natus doloribus consequatur
+                        praesentium debitis. Quaerat consequatur modi dolor delectus!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis vero cupiditate molestias,
+                        est
+                        non voluptate illum eligendi doloremque exercitationem corporis itaque, totam commodi
+                        reiciendis
+                        saepe iste dolor veniam laboriosam! Eligendi?
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptas dicta officiis vel
+                        nesciunt dignissimos distinctio totam harum impedit natus quo, esse illo eos, necessitatibus
+                        numquam corporis eveniet sit vero!
+                    </p>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+
+
+
+
+
+
+
+    <script src="../scripts/index.js"></script>
+</body>
+
+</html>
